@@ -6,8 +6,10 @@ import os
 # Initialize Flask app
 app = Flask(__name__)
 
-openai.api_key = os.getenv("OPENAI_API_KEY")
-# Load JSON content from file
+# Set up OpenAI API key from an environment variable
+openai.api_key = os.getenv("OPENAI_API_KEY")  # Store your API key securely as an environment variable
+
+# Load JSON content from file (only once at startup)
 try:
     with open("script.json", "r") as file:
         json_data = json.load(file)
@@ -24,7 +26,7 @@ except KeyError as e:
     print(f"Key error: {e}")
     content = ""
 
-# Initialize conversation history with a system message containing detailed assistant instructions
+# Initialize conversation history with a single system message containing the JSON content
 conversation_history = [
     {
         "role": "system", 
@@ -60,7 +62,7 @@ def query_with_memory(question):
     conversation_history.append({"role": "assistant", "content": answer})
 
     # Check if the conversation history exceeds the maximum length
-    while len(conversation_history) > MAX_HISTORY_LENGTH:
+    while len(conversation_history) > MAX_HISTORY_LENGTH + 1:  # +1 for the initial system message
         # Remove the oldest user-assistant pair (ignoring the first system message)
         conversation_history.pop(1)  # Remove the oldest user message
         conversation_history.pop(1)  # Remove the corresponding assistant message
