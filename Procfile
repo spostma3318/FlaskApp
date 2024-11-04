@@ -1,1 +1,1 @@
-Procfileweb: gunicorn your_flask_app:app
+Procfileweb: gunicorn chatbot:app
