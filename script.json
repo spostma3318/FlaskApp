@@ -1,0 +1,373 @@
+{
+    "stairlifts": {
+      "Modulair": {
+        "paths": {
+          "liftStatus": [
+            {
+              "question": "Kunt u de lift nog bewegen met de grijze bedieningsknop op de stoel?",
+              "actions": [
+                "Controleer of de bedieningsknop goed werkt.",
+                "Probeer de lift handmatig te bewegen."
+              ],
+              "result": {
+                "yes": "Dat is goed nieuws! Ga door met de volgende stap.",
+                "no": "Het lijkt erop dat er een mechanisch probleem is. Neem contact op met een monteur voor verdere hulp."
+              }
+            }
+          ],
+          "programRecovery": [
+            {
+              "step": 1,
+              "instruction": "Stuur de lift naar de plek waar hij verder zou moeten rijden."
+            },
+            {
+              "step": 2,
+              "instruction": "Schakel het rode lampje uit."
+            },
+            {
+              "step": 3,
+              "instruction": "Houd de grijze schuifknop 20 seconden ingedrukt richting het laadstation en laat deze niet los."
+            },
+            {
+              "step": 4,
+              "instruction": "Schakel het rode lampje weer in door het 1 keer in te drukken. Blijf de grijze schuifknop ingedrukt houden."
+            },
+            {
+              "result": {
+                "yes": "De lift werkt weer naar behoren. Goed gedaan!",
+                "no": "Het lijkt erop dat verdere diagnose nodig is. Neem contact op met een monteur."
+              }
+            }
+          ],
+          "powerOutage": [
+            {
+              "question": "Werkt de lift niet meer na een stroomstoring?",
+              "actions": [
+                "Controleer of de lift goed op het laadpunt staat.",
+                "Herstart de lift door de schuifknop 15 seconden ingedrukt te houden."
+              ],
+              "result": {
+                "yes": "De lift werkt weer normaal. Fijn dat het probleem is opgelost!",
+                "no": "Het lijkt erop dat er verdere hulp nodig is. Neem contact op met een monteur."
+              }
+            }
+          ],
+          "beltCheck": [
+            {
+              "question": "Zit de gordel goed vast?",
+              "actions": [
+                "Zorg ervoor dat de gordel correct vastzit."
+              ],
+              "result": {
+                "yes": "Goed zo! Ga verder met de volgende check.",
+                "no": "Klik de gordel goed vast om door te gaan."
+              }
+            }
+          ],
+          "foldingSection": [
+            {
+              "question": "Heeft de lift een klapstuk en doet deze niets meer?",
+              "actions": [
+                "Controleer of er obstakels zijn bij het klapstuk.",
+                "Probeer het klapstuk handmatig te bewegen."
+              ],
+              "result": {
+                "yes": "Het klapstuk werkt weer. Goed gedaan!",
+                "no": "Neem contact op met een monteur om het klapstuk te laten repareren."
+              }
+            }
+          ],
+          "footrestProblem": [
+            {
+              "question": "Werkt de voetenplank niet goed?",
+              "actions": [
+                "Controleer of de voetenplank vrij kan bewegen.",
+                "Probeer de voetenplank opnieuw te bewegen."
+              ],
+              "result": {
+                "yes": "De voetenplank werkt weer zoals het hoort. Goed gedaan!",
+                "no": "Het lijkt erop dat de voetenplank defect is. Neem contact op met een monteur."
+              }
+            }
+          ],
+          "remoteNotWorking": [
+            {
+              "question": "Werkt de wandbediening niet?",
+              "actions": [
+                "Controleer of de batterijen in de wandbediening nog vol zijn.",
+                "Vervang de batterijen indien nodig."
+              ],
+              "result": {
+                "yes": "De wandbediening werkt weer. Goed bezig!",
+                "no": "Het lijkt erop dat de wandbediening defect is. Overweeg om deze te vervangen of neem contact op met een monteur."
+              }
+            }
+          ],
+          "chargingIssue": [
+            {
+              "question": "Blijft de lift piepen terwijl hij op het laadpunt staat?",
+              "actions": [
+                "Controleer of de lift goed is uitgelijnd met het laadpunt.",
+                "Controleer of de laadpunten schoon zijn en goed contact maken."
+              ],
+              "result": {
+                "yes": "De lift laadt weer correct op. Fijn dat dit is opgelost!",
+                "no": "Het lijkt erop dat er een probleem is met het laden. Neem contact op met een monteur voor verdere hulp."
+              }
+            }
+          ],
+          "identifyLiftType": [
+            {
+              "question": "Hoe kan ik vaststellen welk type lift ik heb?",
+              "actions": [
+                "Controleer de documentatie die u bij de installatie van de lift heeft ontvangen. Hierin staat vaak het type vermeld.",
+                "Bekijk de rail van de lift: een Modulair lift heeft een enkele buis, terwijl een Two lift een dubbele buis heeft.",
+                "Controleer het bedieningspaneel: een JADE/PAR lift heeft vaak een aluminium rail en een joystick op de armleuning.",
+                "Op de lift zelf staat mogelijk een label met de modelnaam of het serienummer. Gebruik dit om het type te identificeren."
+              ],
+              "result": {
+                "found": "Het type lift is succesvol geïdentificeerd. Bedankt voor uw hulp!",
+                "notFound": "Geen zorgen, neem contact op met de klantenservice voor verdere hulp bij het identificeren van uw liftmodel."
+              }
+            }
+          ]
+        }
+      },
+      "JADE/PAR": {
+        "paths": {
+          "liftStatus": [
+            {
+              "question": "Kunt u de lift nog bewegen met de bedieningsknop op de stoel?",
+              "actions": [
+                "Controleer of de knop goed verbonden is met de stoel."
+              ],
+              "result": {
+                "yes": "Dat is goed nieuws! De lift werkt weer normaal.",
+                "no": "Het lijkt erop dat de knop defect is. Overweeg om deze te vervangen."
+              }
+            }
+          ],
+          "foldingSection": [
+            {
+              "question": "Heeft de lift een klapstuk en doet deze niets meer?",
+              "actions": [
+                "Controleer of er obstakels zijn bij het klapstuk.",
+                "Probeer het klapstuk handmatig te bewegen."
+              ],
+              "result": {
+                "yes": "Het klapstuk werkt weer zoals het hoort. Goed gedaan!",
+                "no": "Neem contact op met een monteur om het klapstuk te repareren."
+              }
+            }
+          ],
+          "remoteCheck": [
+            {
+              "question": "Werkt de afstandsbediening niet?",
+              "actions": [
+                "Controleer of de batterijen van de afstandsbediening nog vol zijn.",
+                "Vervang de batterijen indien nodig."
+              ],
+              "result": {
+                "yes": "De afstandsbediening werkt weer. Fijn dat het probleem is opgelost!",
+                "no": "Het lijkt erop dat de afstandsbediening defect is. Overweeg om deze te vervangen of neem contact op met een monteur."
+              }
+            }
+          ],
+          "powerOutage": [
+            {
+              "question": "Werkt de lift niet meer na een stroomstoring?",
+              "actions": [
+                "Controleer of de lift goed op het laadpunt staat.",
+                "Controleer of er stroom is en of alle stekkers goed zijn aangesloten."
+              ],
+              "result": {
+                "yes": "De lift functioneert weer normaal. Fijn dat het probleem is opgelost!",
+                "no": "Het lijkt erop dat verdere hulp nodig is. Neem contact op met een monteur."
+              }
+            }
+          ],
+          "joystickIssue": [
+            {
+              "question": "Reageert de joystick niet?",
+              "actions": [
+                "Controleer of de joystick goed is aangesloten.",
+                "Controleer of er zichtbare schade is aan de kabels van de joystick."
+              ],
+              "result": {
+                "yes": "De joystick werkt weer zoals het hoort. Goed gedaan!",
+                "no": "Het lijkt erop dat de joystick defect is. Overweeg om deze te vervangen of neem contact op met een monteur."
+              }
+            }
+          ],
+          "identifyLiftType": [
+            {
+              "question": "Hoe kan ik vaststellen welk type lift ik heb?",
+              "actions": [
+                "Controleer de documentatie die u bij de installatie van de lift heeft ontvangen. Hierin staat vaak het type vermeld.",
+                "Een JADE/PAR lift heeft vaak een aluminium rail en een joystick op de armleuning.",
+                "Op de lift zelf staat mogelijk een label met de modelnaam of het serienummer. Gebruik dit om het type te identificeren."
+              ],
+              "result": {
+                "found": "Het type lift is succesvol geïdentificeerd. Bedankt voor uw hulp!",
+                "notFound": "Geen zorgen, neem contact op met de klantenservice voor verdere hulp bij het identificeren van uw liftmodel."
+              }
+            }
+          ]
+        }
+      },
+      "Two": {
+        "paths": {
+          "liftStatus": [
+            {
+              "question": "Kunt u de lift nog bewegen met de bedieningsknop op de stoel?",
+              "actions": [
+                "Controleer of de knop goed functioneert.",
+                "Probeer de lift te resetten door de gele knop ingedrukt te houden."
+              ],
+              "result": {
+                "yes": "Goed zo! Ga door naar de volgende controle.",
+                "no": "Neem contact op met een monteur om het probleem verder te onderzoeken."
+              }
+            }
+          ],
+          "slideRailCheck": [
+            {
+              "question": "Heeft de lift een schuifstuk (uitschuifbaar railgedeelte onderaan de trap)?",
+              "actions": [
+                "Controleer of het schuifstuk vrij kan bewegen.",
+                "Probeer het schuifstuk opnieuw uit te schuiven."
+              ],
+              "result": {
+                "yes": "Het schuifstuk werkt weer zoals verwacht. Goed gedaan!",
+                "no": "Neem contact op met een monteur om het schuifstuk te herstellen."
+              }
+            }
+          ],
+          "footrestProblem": [
+            {
+              "question": "Werkt de voetenplank niet goed?",
+              "actions": [
+                "Controleer of de voetenplank vrij kan bewegen.",
+                "Probeer de voetenplank opnieuw te bewegen."
+              ],
+              "result": {
+                "yes": "De voetenplank werkt weer naar behoren. Goed gedaan!",
+                "no": "Het lijkt erop dat de voetenplank defect is. Neem contact op met een monteur."
+              }
+            }
+          ],
+          "seatBeltIssue": [
+            {
+              "question": "Werkt de gordel niet goed?",
+              "actions": [
+                "Controleer of de gordel goed vastzit.",
+                "Controleer op zichtbare schade aan de gordel."
+              ],
+              "result": {
+                "yes": "De gordel werkt weer naar behoren. Goed gedaan!",
+                "no": "Het lijkt erop dat de gordel vervangen moet worden. Neem contact op met een monteur."
+              }
+            }
+          ],
+          "identifyLiftType": [
+            {
+              "question": "Hoe kan ik vaststellen welk type lift ik heb?",
+              "actions": [
+                "Controleer de documentatie die u bij de installatie van de lift heeft ontvangen. Hierin staat vaak het type vermeld.",
+                "Een Two lift heeft vaak een dubbele buis als rail, dit is een kenmerk van dit type.",
+                "Op de lift zelf staat mogelijk een label met de modelnaam of het serienummer. Gebruik dit om het type te identificeren."
+              ],
+              "result": {
+                "found": "Het type lift is succesvol geïdentificeerd. Bedankt voor uw hulp!",
+                "notFound": "Geen zorgen, neem contact op met de klantenservice voor verdere hulp bij het identificeren van uw liftmodel."
+              }
+            }
+          ]
+        }
+      },
+      "LINE": {
+        "paths": {
+          "liftStatus": [
+            {
+              "question": "Kunt u de lift nog bewegen met de joystick op de armleuning?",
+              "actions": [
+                "Controleer of de joystick goed werkt.",
+                "Probeer de lift opnieuw op te starten door de hoofdschakelaar uit en weer aan te zetten."
+              ],
+              "result": {
+                "yes": "De lift werkt weer zoals het hoort. Goed gedaan!",
+                "no": "Neem contact op met een monteur voor verdere hulp."
+              }
+            }
+          ],
+          "powerOutage": [
+            {
+              "question": "Heeft de lift problemen na een stroomuitval?",
+              "actions": [
+                "Controleer of er nog stroom is en of de stekker goed is aangesloten.",
+                "Probeer de lift opnieuw op te starten door de aan/uit knop in te schakelen."
+              ],
+              "result": {
+                "yes": "De lift werkt weer normaal. Fijn dat het probleem is opgelost!",
+                "no": "Het lijkt erop dat de accu's mogelijk vervangen moeten worden. Neem contact op met een monteur."
+              }
+            }
+          ],
+          "foldingSection": [
+            {
+              "question": "Controleer of er geen voorwerp bij het klapstuk aanwezig is waardoor deze niet vrij in- en uit kan klappen.",
+              "actions": [
+                "Probeer het klapstuk opnieuw te verplaatsen.",
+                "Rijd de stoel naar boven om te testen."
+              ],
+              "result": {
+                "yes": "Het klapstuk functioneert weer zoals het hoort. Goed gedaan!",
+                "no": "Het lijkt erop dat er een defect is aan het klapstuk. Neem contact op met een monteur."
+              }
+            }
+          ],
+          "footrestProblem": [
+            {
+              "question": "Werkt de voetenplank niet goed?",
+              "actions": [
+                "Controleer of de voetenplank vrij kan bewegen.",
+                "Probeer de voetenplank opnieuw te bewegen."
+              ],
+              "result": {
+                "yes": "De voetenplank werkt weer naar behoren. Goed gedaan!",
+                "no": "Het lijkt erop dat de voetenplank defect is. Neem contact op met een monteur."
+              }
+            }
+          ],
+          "keySwitchIssue": [
+            {
+              "question": "Reageert de lift niet op de sleutelbediening?",
+              "actions": [
+                "Controleer of de sleutel correct is omgedraaid.",
+                "Controleer of de sleutel goed contact maakt."
+              ],
+              "result": {
+                "yes": "De lift reageert weer op de sleutelbediening. Goed gedaan!",
+                "no": "Het lijkt erop dat het sleutelsysteem defect is. Overweeg om het systeem te vervangen of neem contact op met een monteur."
+              }
+            }
+          ],
+          "identifyLiftType": [
+            {
+              "question": "Hoe kan ik vaststellen welk type lift ik heb?",
+              "actions": [
+                "Controleer de documentatie die u bij de installatie van de lift heeft ontvangen. Hierin staat vaak het type vermeld.",
+                "Een LINE lift heeft vaak een joystick die uit de armleuning komt.",
+                "Op de lift zelf staat mogelijk een label met de modelnaam of het serienummer. Gebruik dit om het type te identificeren."
+              ],
+              "result": {
+                "found": "Het type lift is succesvol geïdentificeerd. Bedankt voor uw hulp!",
+                "notFound": "Geen zorgen, neem contact op met de klantenservice voor verdere hulp bij het identificeren van uw liftmodel."
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+  
