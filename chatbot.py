@@ -1,10 +1,13 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 import json
 import openai
 import os
 
 # Initialize Flask app
 app = Flask(__name__)
+
+CORS(app, origins=["http://localhost.com/123trapliften"])
 
 # Set up OpenAI API key from an environment variable
 openai.api_key = os.getenv("OPENAI_API_KEY")  # Store your API key securely as an environment variable
@@ -33,6 +36,7 @@ conversation_history = [
         "content": (
             f"Hier is wat informatie vanuit een bestand:\n\n{content}\n\n"
             "Je bent een behulpzame en empathische assistent die altijd geduldig en vriendelijk reageert. "
+            "Zeg alleen dat ze contact op moeten nemen als je alles hebt geprobeert om het zelf op te lossen"
             "Je bent gericht op het creëren van een warme band met de klant."
             "Probeer alle antwoorden in goed nederlands zonder rare leestekens te geven."
             "Je werkt stap voor stap door de informatie om tot een oplossing te komen."
