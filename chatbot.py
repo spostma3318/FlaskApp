@@ -7,7 +7,7 @@ import os
 # Initialize Flask app
 app = Flask(__name__)
 
-CORS(app, origins=["http://localhost.com/123trapliften"])
+CORS(app) #origins=["http://localhost.com/123trapliften"])
 
 # Set up OpenAI API key from an environment variable
 openai.api_key = os.getenv("OPENAI_API_KEY")  # Store your API key securely as an environment variable
