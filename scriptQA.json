@@ -1,0 +1,606 @@
+{
+"LiftScripts": {
+    "Vraag 1": {
+      "vraag": "Om welk type lift gaat het?",
+      "antwoord": {
+        "Modulair": {
+          "volgendePad": "ModulairLiftScript"
+        },
+        "Two (tweebuis rail)": {
+          "volgendePad": "TwoLiftScript"
+        },
+        "Line (aluminium rail)": {
+          "volgendePad": "LineLiftScript"
+        },
+        "Jade/PAR (aluminium rail)": {
+          "volgendePad": "JadeParLiftScript"
+        }
+      }
+    },
+    "zoekWijze": {
+      "Modulair": {
+        "kenmerken": [
+          "Een enkele buisrail die langs de trap loopt.",
+          "Grijze bedieningsknop op de armleuning.",
+          "Vooral gebruikt voor rechte trappen.",
+          "Heeft een standaard gordel die vastgeklikt moet worden om te kunnen rijden."
+        ]
+      },
+      "Two (tweebuis rail)": {
+        "kenmerken": [
+          "Twee parallelle buizen die langs de trap lopen.",
+          "De lift heeft een brede zitting en armleuningen.",
+          "Wordt meestal gebruikt voor trappen met bochten.",
+          "Beschikt over een gele knop voor bediening."
+        ]
+      },
+      "Line (aluminium rail)": {
+        "kenmerken": [
+          "Aluminium rail met een enkele joystick-bediening op de armleuning.",
+          "Geschikt voor rechte trappen en biedt stabiliteit door een aluminium structuur.",
+          "De lift heeft een klapstuk of schuifstuk voor extra toegang onderaan de trap."
+        ]
+      },
+      "Jade/PAR (aluminium rail)": {
+        "kenmerken": [
+          "Gebruikt een aluminium rail en heeft vaak een uitklapbaar klapstuk.",
+          "Voorzien van een gele knop voor bediening, net als de Two lift.",
+          "Is meestal gemonteerd op bredere en complexere trappen.",
+          "Lift kan piepen wanneer het klapstuk niet correct functioneert."
+        ]
+      }
+    },
+    "ModulairLiftScript": {
+      
+      "Vraag 2": {
+        "vraag": "Is er nog beweging in de lift te krijgen via de grijze bedieningsknop op de stoel?",
+        "antwoord": {
+          "Ja": {
+            "volgendeVraag": "Vraag 3"
+          },
+          "Nee": {
+            "volgendeVraag": "Vraag 4"
+          }
+        }
+      },
+      "Vraag 3": {
+        "vraag": "Wat is de installatiedatum van de traplift?",
+        "antwoord": {
+          "< 01-03-2018": {
+            "volgendeVraag": "Vraag 5"
+          },
+          "> 01-03-2018": {
+            "volgendeVraag": "Vraag 5"
+          }
+        }
+      },
+      "Vraag 4": {
+        "vraag": "Controleer of de gordel vastgeklikt is. Dit is verplicht. De stoel geeft hiervoor geen signalen af.",
+        "antwoord": {
+          "Ja": {
+            "volgendeVraag": "Vraag 6"
+          },
+          "Nee": {
+            "oplossing": "Vraag de klant de gordel vast te klikken en controleer opnieuw.",
+            "volgendeVraag": "Vraag 2"
+          }
+        }
+      },
+      "Vraag 5": {
+        "vraag": "Werkt de lift nu weer?",
+        "antwoord": {
+          "Ja": {
+            "oplossing": "Storing verholpen.",
+            "einde": true
+          },
+          "Nee": {
+            "volgendeVraag": "Vraag 6"
+          }
+        }
+      },
+      "Vraag 6": {
+        "vraag": "Is de lift stilgevallen na een stroomstoring?",
+        "antwoord": {
+          "Ja": {
+            "oplossing": "De lift is in de slaapstand gegaan om de accu’s te sparen. Haal de lift uit de slaapstand door de grijze schuifknop 15 seconden zijwaarts te duwen. Controleer of het rode lampje knippert. Zo ja, druk het lampje in.",
+            "volgendeVraag": "Vraag 7"
+          },
+          "Nee": {
+            "volgendeVraag": "Vraag 7"
+          }
+        }
+      },
+      "Vraag 7": {
+        "vraag": "Hapert de lift tijdens de rit?",
+        "antwoord": {
+          "Ja": {
+            "opties": {
+              "Hapert alleen op stoelbediening": {
+                "oplossing": "Dit kan duiden op zwakke accu’s of een probleem met de armleggerkabel. Als het lampje op de armleuning snel knippert, zijn de accu’s waarschijnlijk zwak.",
+                "volgendeVraag": "Vraag 8"
+              },
+              "Hapert alleen op wandbediening": {
+                "oplossing": "Vervang de AA-batterijen in de wandbediening.",
+                "volgendeVraag": "Vraag 9"
+              },
+              "Hapert op zowel stoel- als wandbediening": {
+                "volgendeVraag": "Vraag 10"
+              }
+            }
+          },
+          "Nee": {
+            "volgendeVraag": "Vraag 9"
+          }
+        }
+      },
+      "Vraag 8": {
+        "vraag": "Werkt de lift nu weer na vervanging van de accu’s in de stoelbediening?",
+        "antwoord": {
+          "Ja": {
+            "oplossing": "Storing verholpen.",
+            "einde": true
+          },
+          "Nee": {
+            "oplossing": "Monteur moet worden ingeschakeld.",
+            "einde": true
+          }
+        }
+      },
+      "Vraag 9": {
+        "vraag": "Zijn er problemen met de voetplank?",
+        "antwoord": {
+          "Ja": {
+            "oplossing": "Vraag of de lift nog rijdt ondanks dat de voetplank niet werkt. Indien ja, kan de lift zonder voetplank worden gebruikt. Monteur kan op een later moment worden ingepland, afhankelijk van de urgentie.",
+            "einde": true
+          },
+          "Nee": {
+            "volgendeVraag": "Vraag 10"
+          }
+        }
+      },
+      "Vraag 10": {
+        "vraag": "Blijft de lift piepen op een laadpunt?",
+        "antwoord": {
+          "Ja": {
+            "oplossing": "Controleer of de stekker goed in het stopcontact zit. Vraag de klant een ander apparaat in het stopcontact te proberen. Als dat werkt, ligt het probleem mogelijk bij de lift. Monteur moet worden ingeschakeld.",
+            "einde": true
+          },
+          "Nee": {
+            "volgendeVraag": "Vraag 11"
+          }
+        }
+      },
+      "Vraag 11": {
+        "vraag": "Liftstatus na poging tot reset met bedieningsknop en laadstation. Werkt de lift nu weer?",
+        "antwoord": {
+          "Ja": {
+            "oplossing": "Storing verholpen.",
+            "einde": true
+          },
+          "Nee": {
+            "oplossing": "Monteur moet worden ingeschakeld.",
+            "einde": true
+          }
+        }
+      },
+      "Vraag 12": {
+        "programmaherstel": {
+          "instructies": [
+            "Stuur de lift door tot de plek waar hij verder door zou moeten rijden.",
+            "Schakel het rode lampje uit.",
+            "Houd de grijze schuifknop 20 seconden richting het laadstation en laat deze niet los.",
+            "Schakel het rode lampje opnieuw in terwijl de grijze schuifknop nog steeds wordt vastgehouden."
+          ],
+          "vraag": "Werkt de lift nu weer?",
+          "antwoord": {
+            "Ja": {
+              "oplossing": "Storing verholpen.",
+              "einde": true
+            },
+            "Nee": {
+              "oplossing": "Monteur moet worden ingeschakeld.",
+              "einde": true
+            }
+          }
+        }
+      }
+    },
+    "TwoLiftScript": {
+      
+      "Vraag 2": {
+        "vraag": "Is er nog beweging in de lift te krijgen via de bedieningsknop op de stoel?",
+        "antwoord": {
+          "Ja": {
+            "volgendeVraag": "Vraag 3"
+          },
+          "Nee": {
+            "volgendeVraag": "Vraag 4"
+          }
+        }
+      },
+      "Vraag 3": {
+        "programmaherstel": {
+          "instructies": [
+            "Stuur de lift door tot de plek waar hij verder door zou moeten rijden.",
+            "Schakel het rode lampje uit.",
+            "Duw de gele knop 20 seconden opzij richting het laadstation en laat deze niet los.",
+            "Schakel het rode lampje weer in zodat deze wordt ingeschakeld. Blijf de gele knop duwen."
+          ],
+          "vraag": "Werkt de lift nu weer?",
+          "antwoord": {
+            "Ja": {
+              "oplossing": "Storing verholpen.",
+              "einde": true
+            },
+            "Nee": {
+              "volgendeVraag": "Vraag 4"
+            }
+          }
+        }
+      },
+      "Vraag 4": {
+        "vraag": "Hapert de lift tijdens de rit?",
+        "antwoord": {
+          "Ja": {
+            "opties": {
+              "Hapert alleen op stoelbediening": {
+                "oplossing": "Dit kan duiden op zwakke accu’s of een probleem in de armleggerkabel. Als het lampje op de armleuning snel knippert, zijn de accu’s waarschijnlijk zwak.",
+                "volgendeVraag": "Vraag 5"
+              },
+              "Hapert alleen op wandbediening": {
+                "oplossing": "Vervang de AA-batterijen in de wandbediening.",
+                "volgendeVraag": "Vraag 6"
+              },
+              "Hapert op zowel stoel- als wandbediening": {
+                "volgendeVraag": "Vraag 7"
+              }
+            }
+          },
+          "Nee": {
+            "volgendeVraag": "Vraag 6"
+          }
+        }
+      },
+      "Vraag 5": {
+        "vraag": "Werkt de lift nu weer na vervanging van de accu’s in de stoelbediening?",
+        "antwoord": {
+          "Ja": {
+            "oplossing": "Storing verholpen.",
+            "einde": true
+          },
+          "Nee": {
+            "oplossing": "Monteur moet worden ingeschakeld.",
+            "einde": true
+          }
+        }
+      },
+      "Vraag 6": {
+        "vraag": "Zijn er problemen met de voetplank?",
+        "antwoord": {
+          "Ja": {
+            "oplossing": "Vraag of de lift nog rijdt ondanks dat de voetplank niet werkt. Indien ja, kan de lift zonder voetplank worden gebruikt. Monteur kan op een later moment worden ingepland, afhankelijk van de urgentie.",
+            "einde": true
+          },
+          "Nee": {
+            "volgendeVraag": "Vraag 7"
+          }
+        }
+      },
+      "Vraag 7": {
+        "vraag": "Heeft de lift een schuifstuk (uitschuifbaar railgedeelte onderaan de trap)?",
+        "antwoord": {
+          "Ja": {
+            "oplossing": "Controleer of de stoel goed op het laadstation staat. Indien het schuifstuk niet werkt, controleer het batterijpeil van de wandbediening en vervang indien nodig de AA-batterijen.",
+            "einde": true
+          },
+          "Nee": {
+            "volgendeVraag": "Vraag 8"
+          }
+        }
+      },
+      "Vraag 8": {
+        "vraag": "Liftstatus na controle van bedieningsknop en laadstation. Werkt de lift nu weer?",
+        "antwoord": {
+          "Ja": {
+            "oplossing": "Storing verholpen.",
+            "einde": true
+          },
+          "Nee": {
+            "oplossing": "Monteur moet worden ingeschakeld.",
+            "einde": true
+          }
+        }
+      },
+      "Vraag 9": {
+        "vraag": "Blijft de lift piepen op een laadpunt?",
+        "antwoord": {
+          "Ja": {
+            "oplossing": "Controleer of de stekker goed in het stopcontact zit. Vraag de klant een ander apparaat in het stopcontact te proberen. Als dat werkt, ligt het probleem mogelijk bij de lift. Monteur moet worden ingeschakeld.",
+            "einde": true
+          },
+          "Nee": {
+            "volgendeVraag": "Vraag 10"
+          }
+        }
+      },
+      "Vraag 10": {
+        "vraag": "Werkt de bediening met de grijze key-fob afstandsbediening?",
+        "antwoord": {
+          "Ja": {
+            "oplossing": "Storing verholpen.",
+            "einde": true
+          },
+          "Nee": {
+            "oplossing": "Monteur moet worden ingeschakeld.",
+            "einde": true
+          }
+        }
+      }
+    }
+  },
+    "LineLiftScript": {
+      
+      "Vraag 2": {
+        "vraag": "Is er nog beweging in de lift te krijgen via de joystick op de armleuning?",
+        "antwoord": {
+          "Ja": {
+            "volgendeVraag": "Vraag 3"
+          },
+          "Nee": {
+            "volgendeVraag": "Vraag 4"
+          }
+        }
+      },
+      "Vraag 3": {
+        "vraag": "Heeft de lift een klap- of schuifstuk en werkt deze nog?",
+        "antwoord": {
+          "Ja": {
+            "volgendeVraag": "Vraag 5"
+          },
+          "Nee": {
+            "oplossing": "Controleer of de stoel goed op het laadpunt staat. Indien het klap- of schuifstuk niet werkt, controleer het batterijpeil van de afstandsbediening en vervang indien nodig de batterijen.",
+            "volgendeVraag": "Vraag 4"
+          }
+        }
+      },
+      "Vraag 4": {
+        "vraag": "Blijft de lift piepen op een laadpunt?",
+        "antwoord": {
+          "Ja": {
+            "oplossing": "Controleer of de stekker goed in het stopcontact zit. Vraag de klant een ander apparaat in het stopcontact te proberen. Indien dit werkt, ligt het probleem mogelijk bij de lift. Monteur moet worden ingeschakeld.",
+            "einde": true
+          },
+          "Nee": {
+            "volgendeVraag": "Vraag 5"
+          }
+        }
+      },
+      "Vraag 5": {
+        "vraag": "Lift rijdt automatisch naar boven en beneden. Blijft een knop hangen op de wand- of afstandsbediening?",
+        "antwoord": {
+          "Ja": {
+            "oplossing": "Controleer of de knoppen op de wandbediening of afstandsbediening goed loskomen. Een vastzittende knop kan automatisch rijden veroorzaken. Verhelp dit indien mogelijk.",
+            "volgendeVraag": "Vraag 6"
+          },
+          "Nee": {
+            "volgendeVraag": "Vraag 6"
+          }
+        }
+      },
+      "Vraag 6": {
+        "vraag": "Liftstatus na controle van joystick en bedieningsknoppen. Werkt de lift nu weer?",
+        "antwoord": {
+          "Ja": {
+            "oplossing": "Storing verholpen.",
+            "einde": true
+          },
+          "Nee": {
+            "oplossing": "Monteur moet worden ingeschakeld.",
+            "einde": true
+          }
+        }
+      },
+      "Vraag 7": {
+        "vraag": "Is de sleutel goed omgedraaid? (Indien de sleutel eruit getrokken kan worden, is de lift uitgeschakeld.)",
+        "antwoord": {
+          "Ja": {
+            "volgendeVraag": "Vraag 8"
+          },
+          "Nee": {
+            "oplossing": "Draai de sleutel een kwartslag zodat de lift ingeschakeld is.",
+            "volgendeVraag": "Vraag 8"
+          }
+        }
+      },
+      "Vraag 8": {
+        "vraag": "Zijn beide armleggers naar beneden geklapt?",
+        "antwoord": {
+          "Ja": {
+            "volgendeVraag": "Vraag 9"
+          },
+          "Nee": {
+            "oplossing": "Laat de klant beide armleggers naar beneden klappen.",
+            "volgendeVraag": "Vraag 9"
+          }
+        }
+      },
+      "Vraag 9": {
+        "vraag": "Lift piept regelmatig, kan dit door een rookmelder, wekker of droog wiel komen?",
+        "antwoord": {
+          "Ja": {
+            "oplossing": "Waarschuw de klant dat het piepen door externe factoren veroorzaakt kan worden, zoals rookmelders of een droog wiel. Indien nodig kan een melding voor het droog wiel op een doordeweekse dag worden ingediend.",
+            "einde": true
+          },
+          "Nee": {
+            "volgendeVraag": "Vraag 10"
+          }
+        }
+      },
+      "Vraag 10": {
+        "programmaherstel": {
+          "instructies": [
+            "Zet de stoel omhoog.",
+            "Rijd de lift 1 meter weg van het laadpunt, dit kan met de wand- of stoelbediening.",
+            "Rijd de lift vervolgens terug naar het laadpunt.",
+            "Zet de stoel weer omlaag.",
+            "Test de stoel nogmaals."
+          ],
+          "vraag": "Werkt de lift nu weer?",
+          "antwoord": {
+            "Ja": {
+              "oplossing": "Storing verholpen.",
+              "einde": true
+            },
+            "Nee": {
+              "oplossing": "Monteur moet worden ingeschakeld.",
+              "einde": true
+            }
+          }
+        }
+      }
+    },
+    "JadeParLiftScript": {
+     
+      "Vraag 2": {
+        "vraag": "Is er nog beweging in de lift te krijgen via de bedieningsknop op de stoel?",
+        "antwoord": {
+          "Ja": {
+            "volgendeVraag": "Vraag 3"
+          },
+          "Nee": {
+            "volgendeVraag": "Vraag 4"
+          }
+        }
+      },
+      "Vraag 3": {
+        "vraag": "Heeft de lift een klapstuk (uitklapbaar gedeelte onderaan de trap) en werkt deze nog?",
+        "antwoord": {
+          "Ja": {
+            "volgendeVraag": "Vraag 5"
+          },
+          "Nee": {
+            "oplossing": "Controleer of de lift goed op het laadpunt boven staat. Indien het laadpunt niet is vrijgegeven, zal het klapstuk niet inklappen.",
+            "volgendeVraag": "Vraag 4"
+          }
+        }
+      },
+      "Vraag 4": {
+        "vraag": "Liftstatus na controle van het laadpunt en klapstuk. Werkt de lift nu weer?",
+        "antwoord": {
+          "Ja": {
+            "oplossing": "Storing verholpen.",
+            "einde": true
+          },
+          "Nee": {
+            "volgendeVraag": "Vraag 5"
+          }
+        }
+      },
+      "Vraag 5": {
+        "vraag": "Blijft de lift piepen op een laadpunt?",
+        "antwoord": {
+          "Ja": {
+            "oplossing": "Controleer of de stekker goed in het stopcontact zit. Vraag de klant een ander apparaat in het stopcontact te proberen. Indien dit werkt, ligt het probleem mogelijk bij de lift. Monteur moet worden ingeschakeld.",
+            "einde": true
+          },
+          "Nee": {
+            "volgendeVraag": "Vraag 6"
+          }
+        }
+      },
+      "Vraag 6": {
+        "vraag": "Rijdt de lift automatisch naar boven en beneden?",
+        "antwoord": {
+          "Ja": {
+            "oplossing": "Controleer of er een knop blijft hangen op de wand- of afstandsbediening. Verhelp dit indien mogelijk.",
+            "volgendeVraag": "Vraag 7"
+          },
+          "Nee": {
+            "volgendeVraag": "Vraag 7"
+          }
+        }
+      },
+      "Vraag 7": {
+        "vraag": "Liftstatus na controle van knoppen op de afstandsbediening. Werkt de lift nu weer?",
+        "antwoord": {
+          "Ja": {
+            "oplossing": "Storing verholpen.",
+            "einde": true
+          },
+          "Nee": {
+            "volgendeVraag": "Vraag 8"
+          }
+        }
+      },
+      "Vraag 8": {
+        "programmaherstel": {
+          "instructies": [
+            "Stuur de lift naar de plek waar hij verder zou moeten rijden.",
+            "Schakel het rode lampje uit.",
+            "Duw de gele knop 20 seconden zijwaarts richting het laadstation en houd deze vast.",
+            "Schakel het rode lampje weer in terwijl de gele knop nog steeds wordt ingedrukt."
+          ],
+          "vraag": "Werkt de lift nu weer?",
+          "antwoord": {
+            "Ja": {
+              "oplossing": "Storing verholpen.",
+              "einde": true
+            },
+            "Nee": {
+              "volgendeVraag": "Vraag 9"
+            }
+          }
+        }
+      },
+      "Vraag 9": {
+        "vraag": "Heeft de lift geen beweging na een stroomstoring?",
+        "antwoord": {
+          "Ja": {
+            "oplossing": "Controleer het klapstuk en de voetplank. Indien er geen beweging is, moet de monteur worden ingeschakeld.",
+            "einde": true
+          },
+          "Nee": {
+            "volgendeVraag": "Vraag 10"
+          }
+        }
+      },
+      "Vraag 10": {
+        "vraag": "Lift hapert tijdens rit. Zijn de accu’s mogelijk zwak?",
+        "antwoord": {
+          "Ja": {
+            "oplossing": "Als het lampje op de armleuning snel knippert, duidt dit op zwakke accu’s. Vervang de accu’s.",
+            "volgendeVraag": "Vraag 11"
+          },
+          "Nee": {
+            "volgendeVraag": "Vraag 11"
+          }
+        }
+      },
+      "Vraag 11": {
+        "vraag": "Zijn er problemen met de voetplank?",
+        "antwoord": {
+          "Ja": {
+            "oplossing": "Indien de lift nog functioneert, kan de lift zonder voetplank worden gebruikt. Monteur kan op een later moment worden ingepland.",
+            "einde": true
+          },
+          "Nee": {
+            "volgendeVraag": "Vraag 12"
+          }
+        }
+      },
+      "Vraag 12": {
+        "vraag": "Werkt de lift niet met de afstandsbediening?",
+        "antwoord": {
+          "Ja": {
+            "oplossing": "Vervang de AA-batterijen in de afstandsbediening. Controleer of deze goed geplaatst zijn.",
+            "einde": true
+          },
+          "Nee": {
+            "oplossing": "Monteur moet worden ingeschakeld.",
+            "einde": true
+          }
+        }
+      }
+    }
+  }
+  
