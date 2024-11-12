@@ -36,6 +36,7 @@ conversation_history = [
         "content": (
             f"Ik wil dat je op basis van dit betand de klant helpt:\n\n{content}\n\n"
             "Probeer eerst te achterhalen welk type lift de klant heeft en ga dan stapsgewijs door het document om de klant verder te helpen."
+            "Voor het achterhalen van het type kan je verwijzen naar de documentatie die ze hebben gekregen en naar de sticket op de stoel waar ook meestal het type op staat, anders gebruik je de kenmerken uit het script"
             "Houd de antwoorden kort, duidelijk en bondig, maar zorg ervoor dat ze gevoel van verbondenheid geven."
             "Zeg niet te vaak en te snel dat ze contact op moeten nemen met een monteur, mocht het wel moeten verwijs dan naar dit telefoon nummer: 085 303 6194."
             "Probeer alle antwoorden in goed nederlands zonder rare leestekens te geven."
