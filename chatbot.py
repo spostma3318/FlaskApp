@@ -14,14 +14,14 @@ openai.api_key = os.getenv("OPENAI_API_KEY")  # Store your API key securely as a
 
 # Load JSON content from file (only once at startup)
 try:
-    with open("script.json", "r") as file:
+    with open("scriptQA.json", "r") as file:
         json_data = json.load(file)
         
         # Check JSON structure and assign content
-        if "stairlifts" in json_data:
-            content = json.dumps(json_data["stairlifts"])  # Convert to string if it's a dict or list
+        if "LiftScripts" in json_data:
+            content = json.dumps(json_data["LiftScripts"])  # Convert to string if it's a dict or list
         else:
-            raise KeyError("The JSON file must contain a 'stairlifts' key at the root.")
+            raise KeyError("The JSON file must contain a 'LiftScripts' key at the root.")
 except FileNotFoundError:
     print("The JSON file 'script.json' was not found.")
     content = ""
